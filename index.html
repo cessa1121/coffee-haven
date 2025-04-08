@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Haven</title>
+	<link rel="stylesheet" href="file:///C:/Users/Admin/OneDrive/Desktop/WEBSITE/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: url('https://i.pinimg.com/736x/b7/c6/63/b7c6635d718443594fcd99a6b2feef1d.jpg') no-repeat center center fixed;
+            background-size: cover;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        header {
+            background-color: rgba(111, 78, 55, 0.8);
+            color: white;
+            padding: 20px;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .menu-container {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            margin: 40px auto;
+        }
+        h2 {
+            color: #ffcc80;
+            margin-top: 40px;
+        }
+        .menu-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .menu-column {
+            flex: 1;
+            min-width: 320px;
+        }
+        .menu-section {
+            margin-bottom: 40px;
+        }
+        .menu-items {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        .menu-item {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            border-radius: 10px;
+            text-align: center;
+        }
+        .menu-item img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .item-description {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #ffe0b2;
+        }
+        button {
+            background-color: #6f4e37;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Coffee Haven</h1>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="showSection('home')">Home</a></li>
+                <li><a href="#" onclick="showSection('menu')">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section active">
+        <h2>Welcome to the best coffee experience!</h2>
+        <p>Enjoy our selection of freshly brewed coffee, teas, and pastries.</p>
+    </section>
+
+    <section id="menu" class="section">
+        <div class="menu-container">
+            <div class="menu-grid">
+                <div class="menu-column">
+                    <div class="menu-section">
+                        <h2>☕ Coffee Menu</h2>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/7c/bb/f8/7cbbf82e2696d3101fedadf0cf0a66d3.jpg" alt="Espresso">
+                                <div class="item-description">Espresso – ₱40</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/4a/d7/b7/4ad7b70efacd8390944568f16d1a3096.jpg" alt="Americano">
+                                <div class="item-description">Americano – ₱60</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/6a/86/c3/6a86c387495a30851e5843a582c7b6f2.jpg" alt="Latte">
+                                <div class="item-description">Latte – ₱90</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/33/44/2e/33442e58a74503c7cef4fc437a4ebc8e.jpg" alt="Cappuccino">
+                                <div class="item-description">Cappuccino – ₱90</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/a8/14/3a/a8143ac4789cd89413115c69d593f180.jpg" alt="Flat White">
+                                <div class="item-description">Flat White – ₱100</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/f1/4e/70/f14e7007806beed9f34ff9cf733e5e52.jpg" alt="Mocha">
+                                <div class="item-description">Mocha – ₱110</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/da/1c/f5/da1cf52f55b7b4adcac8dbff75a7a223.jpg" alt="Macchiato">
+                                <div class="item-description">Macchiato – ₱70</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/18/da/2f/18da2fad7461d22ec47f3a8d7da6e7b3.jpg" alt="Cold Brew">
+                                <div class="item-description">Cold Brew – ₱90</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/bc/f7/24/bcf72409cf283799949e915058e930c1.jpg" alt="Iced Coffee">
+                                <div class="item-description">Iced Coffee – ₱75</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-column">
+                    <div class="menu-section">
+                        <h2>🍵 Tea & Other Beverages</h2>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/03/47/6e/03476e1a455fbad5eda2bc5679872a80.jpg" alt="Chai Latte">
+                                <div class="item-description">Chai Latte – ₱110</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/6b/c5/59/6bc5595361ab1769566eec2dbb767503.jpg" alt="Matcha Latte">
+                                <div class="item-description">Matcha Latte – ₱130</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/32/ec/9a/32ec9a653626fb51a95d97b145b42893.jpg" alt="Hot Chocolate">
+                                <div class="item-description">Hot Chocolate – ₱100</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/76/52/cd/7652cdcc31d582db0827dec88b321bd8.jpg" alt="Herbal Tea">
+                                <div class="item-description">Herbal Tea – ₱50</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/b2/1f/02/b21f0295c43b75922bbbad4f4b689f8c.jpg" alt="Iced Tea">
+                                <div class="item-description">Iced Tea – ₱70</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu-section">
+                        <h2>🥐 Pastries & Snacks</h2>
+                        <div class="menu-items">
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/1f/f2/62/1ff262c82ec4a567839db46ceef900bc.jpg" alt="Croissant">
+                                <div class="item-description">Croissant – ₱160</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/08/d1/83/08d1835cea98922654beac97051979aa.jpg" alt="Muffin">
+                                <div class="item-description">Muffin – ₱180</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/736x/22/ec/c4/22ecc4e7161c376b299ea8e39bf20020.jpg" alt="Bagel">
+                                <div class="item-description">Bagel w/ Cream Cheese – ₱100</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/474x/18/12/60/181260de7cd9f2de9a11fe9aa891b757.jpg" alt="Cookie">
+                                <div class="item-description">Chocolate Chip Cookie – ₱140</div>
+                            </div>
+                            <div class="menu-item">
+                                <img src="https://i.pinimg.com/474x/6e/f8/96/6ef896e30ac71cbc3fc4985cf0676850.jpg" alt="Avocado Toast">
+                                <div class="item-description">Avocado Toast – ₱150</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="redirectToAccount()">Order Now</button>
+        </div>
+    </section>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('.section').forEach(section => {
+                section.classList.remove('active');
+            });
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+        function redirectToAccount() {
+            window.location.href = 'https://www.instagram.com/coffe_ehvn?igsh=ZGUzMzM3NWJiOQ==';
+        }
+    </script>
+</body>
+</html>
